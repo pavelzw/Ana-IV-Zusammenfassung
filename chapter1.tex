@@ -1,0 +1,58 @@
+\section{Grundlagen}
+
+\begin{karte}{Notationen 1}
+    \begin{itemize}
+        \item \(D_R(z_0) = U_R(z_0) = \set{z\in \C : \abs{z-z_0} < R}\) ist 
+        die offene Kugel um \(z_0\) mit Radius \(R\).
+        \item \(D_\varepsilon(z_0)\) wird auch \(\varepsilon\)-Umgebung von \(z_0\) genannt.
+        \item \(C_R(z_0) = \partial D_R(z_0)\) Kreis um \(z_0\) mit Radius \(R\).
+        \item \(S \subset C, S^C = \C \setminus S\) Komplement von \(S\).
+        \item \(S\) ist abgeschlossen, falls \(S^C\) offen ist (bzw. \((z_n)_n \subset S, z_n \rightarrow z \Rightarrow z\in S\))
+        \item \(S\) ist beschränkt, falls \(S \subset D_R(0)\) für ein \(R > 0\).
+        \item \(S\) ist kompakt genau dann, wenn \(S\) abgeschlossen und beschränkt ist.
+    \end{itemize}
+\end{karte}
+
+\begin{karte}{Notationen 2}
+    \begin{itemize}
+        \item \(S\) ist unzusammenhängend, falls offene Mengen \(A, B \subset \C\) existieren, \(A\cap B = \emptyset\) 
+        mit \(S \subset A \cup B\) und \(S \not\subseteq A, S \not \subseteq B\).
+        \item \(S\) ist zusammenhängend, falls \(S\) nicht unzusammenhängend ist.
+        \item \([z_1, z_2] := \set{t z_1 + (1-t) z_2 \;|\; 0\leq t \leq 1}\).
+        \item Polygonzug: endliche Vereinigung von zusammenhängenden Segmenten 
+        der Form 
+        \[ [z_0, z_1] \cup [z_1, z_2] \cup \cdots \cup [z_{n-1}, z_n]. \]
+        \item Ist \(S\subset \C\) und können je zwei Punkte in \(S\) durch 
+        einen Polygonzug verbunden werden, so heißt \(S\) 
+        (polygonal) wegzusammenhängend. Jede polygonal wegzusammenhängende 
+        Menge ist zusammenhängend, aber nicht umgekehrt.
+    \end{itemize}
+\end{karte}
+
+\begin{karte}{Gebiet/Umgebung}
+    Eine offene, zusammenhängende Menge heißt Gebiet oder 
+    (offene) Umgebung.\\
+    Jedes Gebiet ist polygonal zusammenhängend.
+\end{karte}
+
+\begin{karte}{\(M\)-Test}
+    Angenommen \(f_n\) ist stetig auf \(D\) für alle \(n\in\N\), 
+    ist \(\abs{f_n} \leq M_n\) auf \(D\) und \(sum_{n=1}^\infty M_n < \infty\), 
+    so konvergiert die Reihe \(\sum_{n=1}^\infty f_n(x)\) (absolut und gleichmäßig auf \(D\)) 
+    gegen eine stetige Funktion auf \(D\).
+\end{karte}
+
+\begin{karte}{Stereographische Projektion}
+    Sei \(\Sigma := \set{ (\xi, \eta, \rho) \in \R^3 \;|\;\xi^2 + \eta^2 + (\rho - \frac{1}{2})^2 = \frac{1}{4} }\) Sphäre in \(\R^3\) 
+    mit Radius \(\frac{1}{2}\) um den Mittelpunkt \((0,0,\frac{1}{2})\). 
+    Ferner sei die Ebene \(\rho = 0\) identifiziert mit \(R^2 = \C\), \(\xi = x\)-Achse und \(\eta = y\)-Achse.\\
+    Jeder Punkt \((\xi, \eta, \rho) \neq (0,0,1)\) wird mit dem Punkt \(z\in \C\) assoziiert, durch den der Strahl von \((0,0,1)\)
+    durch \((\xi,\eta,\rho)\) die Ebene \(\R^2 = \C\) schneidet.
+
+    Sei \(S\) ein Kreis in \(\Sigma\) und \(T\) die stereographische
+    Projektion von \(S\) in \(\C\). Dann gilt 
+    \begin{enumerate}
+        \item Enthält \(S\) den Punkt \((0,0,1)\), so ist \(T\) eine Linie.
+        \item Ist \((0,0,1) \notin S\), so ist \(T\) ein Kreis.
+    \end{enumerate}
+\end{karte}

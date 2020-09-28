@@ -1,0 +1,42 @@
+\section{Funktionen von \(z\)}
+
+\subsection{Analytische Polynome}
+
+\begin{karte}{Allgemeines Polynom}
+    Ein allgemeines Polynom auf \(\C = \R^2\) 
+    ist eine endliche Linearkombination von Monomen, d. h. 
+    \[ P(x,y) = \sum_{j=1}^m \sum_{k=1}^n a_{jk} x^j y^k. \]
+\end{karte}
+
+\begin{karte}{Analytisches Polynom}
+    Ein Polynom \(P(x,y)\) heißt analytisch, falls es komplexe Zahlen 
+    \( \alpha_0, \ldots, \alpha_N \) gibt, sodass 
+    \[ P(x,y) = \alpha_0 + \alpha_1 (x+iy) + \cdots + \alpha_N (x+iy)^N. \]
+    Wir sagen dann, dass \(P\) ein Polynom in \(z\) ist und schreiben 
+    \[ P(z) = \alpha_0 + \alpha_1 z + \cdots + \alpha_N z^N. \]
+\end{karte}
+
+\begin{karte}{Partielle Ableitungen}
+    Sei \( f(x,y) = u(x,y) + iv(x,y) \), \(u,v\) reellwertige Funktionen. 
+    Die partiellen Ableitungen \(f_x\) und \(f_y\) sind definiert als 
+    \[ f_x := u_x + i v_x, \qquad f_y := u_y + i v_y, \]
+    sofern \(u\) und \(v\) partielle Ableitungen haben. 
+\end{karte}
+
+\begin{karte}{Cauchy-Riemann Differentialgleichungen}
+    Ein Polynom \(P\) ist genau dann analytisch, wenn \(P_y = i P_x\).\\
+    Oder äquivalent: 
+    \[ u_x = v_y \text{ und } u_y = -v_x. \]
+\end{karte}
+
+\subsection{Komplex Differentierbar}
+
+\begin{karte}{Komplex differentierbar}
+    Eine komplexwertige Funktion \(\abb{f}{U}{\C}, U\) Umgebung um \(z\), 
+    ist (komplex) differentierbar in \(z\in U\), falls 
+    \[ \limesx{h}{0} \frac{f(z+h) - f(z)}{h} \] existiert. 
+    In diesem Fall setzen wir 
+    \[ f'(z) := \limesx{h}{0} \frac{f(z+h) - f(z)}{h}. \]
+    Wir nennen \(f\) differenzierbar, falls \(f\) in jedem Punkt \(z\in U\) (komplex) 
+    differentierbar ist.
+\end{karte}
