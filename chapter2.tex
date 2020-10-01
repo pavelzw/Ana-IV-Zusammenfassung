@@ -29,14 +29,77 @@
     \[ u_x = v_y \text{ und } u_y = -v_x. \]
 \end{karte}
 
-\subsection{Komplex Differentierbar}
+\subsection{Komplex differenzierbar}
 
-\begin{karte}{Komplex differentierbar}
+\begin{karte}{Komplex differenzierbar}
     Eine komplexwertige Funktion \(\abb{f}{U}{\C}, U\) Umgebung um \(z\), 
-    ist (komplex) differentierbar in \(z\in U\), falls 
+    ist (komplex) differenzierbar in \(z\in U\), falls 
     \[ \limesx{h}{0} \frac{f(z+h) - f(z)}{h} \] existiert. 
     In diesem Fall setzen wir 
     \[ f'(z) := \limesx{h}{0} \frac{f(z+h) - f(z)}{h}. \]
     Wir nennen \(f\) differenzierbar, falls \(f\) in jedem Punkt \(z\in U\) (komplex) 
-    differentierbar ist.
+    differenzierbar ist.
+\end{karte}
+
+\begin{karte}{Produktregel, Kettenregel}
+    Sind \(f,g\) komplex differenzierbar in \(z\), so gilt dies auch für \(f+g\) und \(fg\) 
+    und ist \(g(z) \neq 0\), so ist \(\frac{f}{g}\) differenzierbar. Es gilt: 
+    \begin{enumerate}
+        \item \((f+g)'(z) = f'(z) + g'(z)\)
+        \item \((fg)'(z) = f'(z)g(z) + f(z)g'(z)\)
+        \item \( (\frac{f}{g})'(z) = \frac{f'(z) g(z) - f(z) g'(z)}{g(z)^2} \)
+    \end{enumerate}
+\end{karte}
+
+\begin{karte}{Analytische Polynome komplex differenzierbar}
+    Ist \(P(z) = a_0 + a_1 z + \cdots + a_N z^N\) ein analytisches Polynom, dann ist \(P\) komplex differenzierbar 
+    in jedem Punkt \(z\in\C\) und es gilt 
+    \[ P'(z) = \alpha_1 + 2\alpha_2 z + 3\alpha_3 z^2 + \cdots + N \alpha_N z^{N-1}. \]
+\end{karte}
+
+\subsection{Potenzreihen}
+
+\begin{karte}{Potenzreihe}
+    Eine Potenzreihe in \(z\) ist eine unendliche Reihe der Form 
+    \[ \sum_{n=0}^\infty a_n z^n \text{ oder } \sum_{n=0}^\infty a_n (z - z_0)^n. \]
+\end{karte}
+
+\begin{karte}{Konvergenzradius}
+    Angenommen \( L = \limsup_{n\rightarrow\infty} \abs{a_n}^{1/n} \). Dann gilt: 
+    \begin{enumerate}
+        \item Ist \(L = 0\), so konvergiert \( \sum_{n=0}^\infty a_n z^n \) für alle \(z\in \C\).
+        \item Ist \( L = \infty \), so konvergiert \( \sum_{n=0}^\infty a_n z^n \) für alle \(z\in \C\).
+        \item Ist \( 0 < L < \infty \), setze \(R := \frac{1}{L}\). Dann konvergiert \( \sum_{n=0}^\infty a_n z^n \) für alle \(\abs{z} < R\) 
+        und divergiert für alle \(\abs{z} > R\).
+    \end{enumerate}
+    \(R\) ist der Konvergenzradius. Falls \(R > 0\) ist, gilt, dass für alle \( 0<\tilde{R}<R \) die Potenzreihe 
+    \(\sum_{n=0}^\infty a_n z^n\) gleichmäßig für alle \(\abs{z} < \tilde{R}\) konvergiert.
+\end{karte}
+
+\begin{karte}{Ableitung Potenzreihe}
+    Angenommen \(f(z) := \sum_{n=0}^\infty a_n z^n\) konvergiert für \(\abs{z} < R\). 
+    Dann ist \(f\) komplex differenzierbar und 
+    \[ f'(z) = \sum_{n=1}^\infty n a_n z^{n-1} \text{ für alle } \abs{z} < R. \]
+    Jede Potenzreihe ist innerhalb ihres Konvergenzradius unendlich oft differenzierbar. 
+    Hat \( f(z) = \sum_{n=0}^\infty a_n z^n \) einen Konvergenzradius \(R > 0\), so gilt 
+    \[ a_n = \frac{f^{(n)}(0)}{n!}. \]
+\end{karte}
+
+\subsection{Eindeutigkeit Potenzreihen}
+
+\begin{karte}{Eindeutigkeit von Potenzreihen}
+    Angenommen \(f(z) = \sum_{n=0}^\infty a_n z^n\) konvergiert für ein 
+    \(z \neq 0\) und \(f(z_n) = 0\) für eine Nullfolge \((z_n)_n\) mit \(z_n \neq 0\) 
+    für alle \(n\in\N\). Dann gilt 
+    \[ a_n = 0 \forall n\in\N_0. \]
+\end{karte}
+
+\begin{karte}{Potenzreihe mit Häufungspunkt \(0\)}
+    Ist die Potenzreihe \(\sum_{n=0}^\infty a_n z^n\) Null für alle \(z\) in einer Menge \(S\), 
+    die den Häufungspunkt Null hat, so ist \(a_n = 0\) für alle \(n\in\N_0\).
+\end{karte}
+
+\begin{karte}{Gleichheit von Potenzreihen}
+    Konvergieren \(\sum_{n=0}^\infty a_n z^n\) und \(\sum_{n=0}^\infty b_n z^n\) und sind diese gleich für alle \(z\) in 
+    einer Menge \(S\) mit Häufungspunkt Null, so ist \(a_n = b_n\) für alle \(n\in\N_0\).
 \end{karte}
