@@ -1,0 +1,49 @@
+\section{Analytische Funktionen}
+
+\begin{karte}{Komplexe Differenzierbarkeit mit Cauchy-Riemann-DGL}
+    Angenommen \(\abb{f}{U}{\C}\), \(U\) Gebiet in \(\C\), ist komplex 
+    differenzierbar in \(z\in U\). Dann existieren die partiellen Ableitungen 
+    \(f_x, f_y\) in \(z\) und erfüllen die Cauchy-Riemann-DGL 
+    \[ f_y = i f_x \]
+    in \(z\in U\) oder, schreibt man \(f=u+iv\) 
+    \[ u_x = v_y, \quad u_y = -v_x. \]
+    Alternativ fassen wir \(f\) als Abbildung von \(\R^2 \rightarrow \R^2\) auf. 
+    \[ Df = (\partial_x f, \partial_y f) = \begin{pmatrix}
+        \partial_x u & \partial_y u \\ \partial_x u & \partial_y u
+    \end{pmatrix}. \]
+    Die Umkehrung gilt i. A. nicht.
+\end{karte}
+
+\begin{karte}{Cauchy-Riemann-DGL mit komplexer Differenzierbarkeit}
+    \( \abb{f}{U}{\C} \) besitze die partielle Ableitung \(f_x, f_y\) in einer Umgebung von \(z\) 
+    und \(f_x, f_y\) seien stetig in dieser Umgebung und \(f_y = i f_x\). Dann ist \(f\) komplex 
+    differenzierbar in \(z\).
+\end{karte}
+
+\begin{karte}{Analytisch}
+    Eine Funktion \(f\) ist analytisch in \(z\) bzw. holomorph in \(z\), 
+    falls \(f\) in einer Umgebung von \(z\) komplex differenzierbar ist.\\
+    \(f\) ist analytisch in der Menge \(S\), falls \(f\) komplex differenzierbar 
+    ist in einer offenen Menge, die \(S\) enthält. \\
+    Ist \(\abb{f}{\C}{\C}\) auf \(\C\) analytisch, so heißt \(f\) ganze Funktion.
+\end{karte}
+
+\begin{karte}{Inverse}
+    Angenommen \(S, T \subset \C\) sind offen, \(\abb{f}{S}{T}\) ist bijektiv. 
+    \(g\) ist die Inverse von \(f\) auf \(T\), falls 
+    \[ f(g(z)) = z \;\forall z\in T. \]
+    \(g\) ist die Inverse von \(f\) in \(z_0\), falls \(g\) die Inverse von \(f\) 
+    in einer Umgebung von \(z_0\) ist.
+\end{karte}
+
+\begin{karte}{Ableitung Inverse}
+    Ist \(g\) die Inverse von \(f\) in \(z_0\) und ist \(g\) stetig in \(z_0\) 
+    und \(f'(g(z_0)) \neq 0\), dann ist \(g\) differenzierbar in \(z_0\) und es gilt 
+    \[ g'(z_0) = \frac{1}{f'(g(z_0))}. \]
+\end{karte}
+
+\begin{karte}{\(\Re(f)\), \(\abs{f}\) konstant}
+    Angenommen \(f=u+iv\) ist analytisch in einem Gebiet \(D\) und \(u\) ist konstant. 
+    Dann ist \(f\) konstant auf \(D\).\\
+    Sei \(f\) analytisch auf einem Gebiet \(D\) und \(\abs{f}\) konstant, dann ist \(f\) konstant.
+\end{karte}
