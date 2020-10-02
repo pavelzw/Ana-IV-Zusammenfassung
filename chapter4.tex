@@ -1,0 +1,74 @@
+
+
+\section{Linienintegrale, ganze Funktionen}
+
+\begin{karte}{Notationen}
+    Ist \(\abb{f}{[a,b]}{\C}\) integrierbar, so setzen wir 
+    \[ \int_a^b f(t) dt := \int_a^b \Re(f(t)) dt + i \int_a^b \Im(f(t)) dt. \]
+    Wir nennen eine stetige Funktion \( \abb{\gamma}{[a,b]}{\C} \) eine Kurve. \\
+    \(\abb{\gamma}{[a,b]}{\C}\) heißt \(C^1\)-Kurve, falls \(\gamma\) stetig ist und auf 
+    \((a,b)\) stetig differenzierbar ist.\\
+    \(\abb{\gamma}{[a,b]}{\C}\) heißt stückweise \(C^1\)-Kurve oder \(PC^1\), 
+    falls es eine Partitionierung \(a = t_0 < t_1 < \cdots < t_n = b\) von 
+    \([a,b]\) gibt, sodass \(\gamma|_{[t_{j-1}, t_j]}\) \(PC^1\) ist.\\
+    Wir nennen \(\gamma\) glatt, falls außerdem \(\dot{\gamma} \neq 0\) auf \((t_{j-1}, t_j)\) bis auf 
+    endlich viele Stellen.
+\end{karte}
+
+\begin{karte}{Kurvenintegral}
+    Gegeben eine glatte Kurve \( \abb{\gamma}{[a,b]}{\C} \). Angenmmen \(f\) ist stetig 
+    auf der Menge \(\gamma([a,b])\). Wir setzen 
+    \[ \int_\gamma f(z) dz := \int_a^b f(\gamma(t))\dot{\gamma}(t) dt \]
+    und nennen dies das Kurvenintegral über \(\gamma\) oder Linienintegral.
+\end{karte}
+
+\begin{karte}{Äquivalenz von Kurven}
+    Zwei Kurven \( \abb{\gamma_1}{[a,b]}{\C}, \abb{\gamma_2}{[c,d]}{\C} \) heißen 
+    (glatt) äquivalent, falls es eine bijektive Abbildung \(\abb{\lambda}{[c,d]}{[a,b]}\) gibt mit 
+    \begin{enumerate}
+        \item \(\lambda\) ist stückweise \(C^1\).
+        \item \(\lambda(c) = a, \lambda(d) = b\) (\(\lambda\) erhält die Richtung).
+        \item \(\dot{\lambda}(t) = \ddx{t} \lambda(t) \geq 0 \;\forall t\in [c,d]\).
+        \item \( \gamma_2 = \gamma_1 \circ \lambda \).
+    \end{enumerate}
+    Sind zwei Kurven \(\gamma_1\) und \(\gamma_2\) glatt äquivalent, dann ist 
+    \[ \int_{\gamma_1} f \dx{z} = \int_{\gamma_2} f \dx{z}. \]
+\end{karte}
+
+\begin{karte}{\(-\gamma\)}
+    Ist \(\abb{\gamma}{[a,b]}{\C}\) eine Kurve, so setzen wir 
+    \[ \abb{-\gamma}{[a,b]}{\C}, t\mapsto \gamma(a+b-t). \]
+    Intuitiv: \(-\gamma\) beschreibt, wie wir in umgekehrter Richtung die Menge durchlaufen.\\
+    Wir können wegen der Äquivalenz immer annehmen, dass \([a,b] = [0,1]\).\\
+    Ist \(\abb{\gamma}{[a,b]}{\C}\) eine glatte Kurve, so ist 
+    \[ \int_{-\gamma} f \dx{z} = -\int_\gamma f \dx{z}. \]
+\end{karte}
+
+\begin{karte}{Integral Betragsabschätzung}
+    Für zwei komplexe Zahlen \(\alpha, \beta \in\C\) schreiben wir \(\alpha \ll \beta \), 
+    falls \(\abs{\alpha} \leq \abs{\beta}\). \\
+    Angenommen \(\abb{G}{[a,b]}{\C}\) ist integrierbar. Dann ist 
+    \[ \int_a^b G(t) \dx{t} \ll \int_a^b \abs{G(t)} \dx{t}. \]
+\end{karte}
+
+\begin{karte}{Länge einer Kurve, \(ML\)-Formel}
+    Die Länge der Kurve \(\abb{\gamma}{[a,b]}{\C}\) ist gegeben durch \( L := \int_a^b \abs{\dot{\gamma}(t)}\dx{t} \).\\
+    Angenommen die Kurve \(\gamma\) hat Länge \(L\), \(f\) ist integrierbar auf \(C := R(\gamma)\) und 
+    \(f \ll M\) auf \(C\). Dann folgt 
+    \[ \abs{ \int_\gamma f \dx{z} } \leq ML. \]
+    Man kann immer \(M := \sup_{a\leq t\leq b} \abs{f(\gamma(t))}\) nehmen.
+\end{karte}
+
+\subsection{Eigenschaften}
+
+\begin{karte}{Konvergenz Kurvenintegrale}
+    Sei \((f_n)_n\) eine Folge stetiger Funktionen und \(f_n \rightarrow f\) gleichmäßig auf der 
+    glatten Kurve \(\abb{\gamma}{[a,b]}{\C}\), also auf \(\gamma([a,b])\). Dann gilt 
+    \[ \limes{n} \int_\gamma f_n \dx{z} = \int_\gamma f \dx{z}. \]
+\end{karte}
+
+\begin{karte}{Hauptsatz der Differential- und Kurvenintegralrechnung}
+    Angenommen \(f\) ist die Ableitung einer analytischen Funktion \(F\) in einer offenen 
+    Umgebung der Kurve \(\abb{\gamma}{[a,b]}{\C}\). Dann ist 
+    \[ \int_\gamma f(z) \dx{z} = F(\gamma(b)) - F(\gamma(a)). \]
+\end{karte}
