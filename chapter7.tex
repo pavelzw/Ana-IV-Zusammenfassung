@@ -1,0 +1,56 @@
+\section{Anwendung Goursat}
+
+\begin{karte}{Stammfunktion einer analytischen Funktion}
+    Sei \(U \subset \C\) eine offene Kreisscheibe und \(\abb{f}{U}{\C}\) analytisch. Dann hat 
+    \(f \) eine Stammfunktion auf \(U\), d. h. es existiert eine analytische Funktion 
+    \[ \abb{F}{U}{\C} \text{ mit } F' = f. \]
+\end{karte}
+
+\begin{karte}{Integral über geschlossene Kurven}
+    Sei \(U \subset \C\) eine offene Kreisscheibe und \(\abb{f}{U}{\C}\) analytisch. Dann gilt 
+    für jede geschlossene Kurve \(\gamma\) in \(U\) 
+    \[ \int_\gamma f(z) \dx{z} = 0. \]
+\end{karte}
+
+\begin{karte}{Stammfunktion auf sternförmigen Mengen}
+    Sei \(U \subset \C\) eine offene, sternförmige Menge und 
+    \(\abb{f}{U}{\C}\) analytisch. Dann hat \(f\) eine Stammfunktion 
+    auf \(U\), d. h. es existiert eine analytische Funktion 
+    \(\abb{F}{U}{\C}\) mit 
+    \[ F'(z) = f(z) \;\forall z\in U. \]
+    Dann folgt 
+    \[ \int_\gamma f(z) \dx{z} = 0. \]
+\end{karte}
+
+\begin{karte}{}
+    Sei \(U \subset \C\) offen und sternförmig, \(\abb{f}{U}{\C}\) analytisch und \(a\in U\). 
+    Dann hat \(\abb{g}{U}{\C}\) definiert durch 
+    \[ g(z) := \begin{cases}
+        \frac{f(z) - f(a)}{z - a}, &z\neq a \\
+        f'(a), & z = a
+    \end{cases} \]
+    eine Stammfunktion, d. h. es existiert eine analytische Funktion 
+    \(\abb{G}{U}{\C}\) mit 
+    \[ G'(z) = g(z) \;\forall z\in U. \]
+\end{karte}
+
+\begin{karte}{Verfeinerung von Goursat auf sternförmigen Mengen}
+    Sei \(U \subset \C\) offen und sternförmig, \(\abb{f}{U}{\C}\) analytisch und \(a\in u\). 
+    Dann ist 
+    \[ \int_\gamma \frac{f(z) - f(a) }{z-a} \dx{z} = 0 \]
+    für jede geschlossene Kurve \(\gamma\) in \(U\).
+\end{karte}
+
+\begin{karte}{Allgemeine Cauchy-Formel, lokale Version}
+    Sei \(U \subset \C\) offen und \(\abb{f}{U}{\C}\) analytisch. Dann gilt für jedes Gebiet 
+    \(G \subset U\) mit nettem Rand (\(\partial G\) ist stückweise glatte Kurve), \(\overline{G} \subset U\) 
+    und jedes \(z\in G\) 
+    \[ f(z) = \frac{1}{2\pi i} \int_{\partial G} \frac{f(\zeta)}{\zeta - z} \dx{\zeta}. \]
+\end{karte}
+
+\begin{karte}{Cauchy-Formel mit Ableitungen}
+    Sei \(U \subset \C\) offen und \(\abb{f}{U}{\C}\) analytisch. Dann gilt 
+    für jedes \(n\in \N_0\) 
+    \[ f^{(n)}(z) = \frac{n!}{2\pi i} \int_{\partial C} \frac{f(\zeta)}{(\zeta - z)^{n+1}} \dx{\zeta}, \]
+    sofern \(C \subset U\) eine Kreisscheibe oder ein Gebiet ist und \(z\in C\).
+\end{karte}
