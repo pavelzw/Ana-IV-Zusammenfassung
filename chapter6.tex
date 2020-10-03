@@ -1,0 +1,22 @@
+\section{Goursat}
+
+\begin{karte}{Wenn nicht Null, so doch ziemlich klein}
+    Sei \(U \subset \C\) offen, \(\abb{f}{U}{\C}\) analytisch. Dann gibt es zu jedem \(z_0 \in U, \varepsilon > 0\) 
+    ein \(\delta > 0\) derart, dass 
+    \[ C_\delta(z_0) \subset U \]
+    und für jedes Rechteck oder Dreieck \(R \subset C_\delta(z_0)\) gilt 
+    \[ \abs{ \int_{\partial R} f(z) \dx{z} } \leq \varepsilon L(\partial R) \sup_{z\in R} \abs{z - z_0} \]
+    mit \(L(\partial R) = \) Länge von \(\partial R\).
+\end{karte}
+
+\begin{karte}{Satz von Goursat}
+    Sei \(U \subset \C\) offen, \(\abb{f}{U}{\C}\) analytisch. Dann gilt für jedes Rechteck \(R \subset U\) 
+    und Dreieck \(T \subset U\)
+    \[ \int_{\partial R} f(z) \dx{z} = \int_{\partial T} f(z) \dx{z} = 0. \]
+\end{karte}
+
+\begin{karte}{Verfeinerung von Goursat}
+    Sei \(U \subset \C\) offen, \(\abb{f}{U}{\C}\) analytisch und \(a\in U\). 
+    Dann folgt für jedes Rechteck \(R\subset U\) bzw. Dreieck \(T \subset U\)
+    \[ \int_{\partial R \text{(bzw. \(T\))}} \frac{f(z) - f(a)}{z - a} \dx{z} = 0. \]
+\end{karte}

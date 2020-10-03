@@ -1,0 +1,45 @@
+\section{Spielen mit Kurvenintegralen}
+
+\subsection{Geschlossene Kurven}
+
+\begin{karte}{Cauchysche Formel}
+    Sei \(G \subset \C\) offen und beschränkt, \(\partial G\) \(PC^1\)-Kurve und \(\abb{f}{\overline{G}}{\C}\) 
+    stetig und stetig differenzierbar in \(G\). Dann gilt für alle \(z\in G\) 
+    \[ f(z) = \frac{1}{2\pi i} \int_{\partial G} \frac{f(\omega)}{ \omega - z } \dx{\omega}. \]
+    Wir erhalten dies auch für \( \tilde{G} = C_r(z_0)\), da \(G\) offen ist.
+\end{karte}
+
+\begin{karte}{Satz von Liouville}
+    Sei \(\abb{f}{\C}{\C}\) eine beschränkte (stetig) koplex differenzierbare Funktion. 
+    Dann ist \(f\) konstant.
+\end{karte}
+
+\begin{karte}{Fundamentalsatz der Algebra}
+    Sei \(P\) ein analytisches Polynom. Hat \(P\) keine Nullstelle, so ist \(P\) konstant. 
+\end{karte}
+
+\begin{karte}{Potenzreihenentwicklung}
+    Sei \(G\subset \C\) offen und \(\abb{f}{G}{\C}\) stetig komplex differenzierbar auf \(G\). Dann gilt:\\
+    Für eine Kreisscheibe \(C_r(z_0) \subset G\) hat \(f\) eine in \(C_r(z_0)\) konvergente Potenzreihenentwicklung.
+\end{karte}
+
+\begin{karte}{Eindeutigkeitssatz}
+    Sei \(U\subset \C\) ein Gebiet (offen und zusammenhägend) und \(\abb{f}{U}{\C}\) stetig komplex 
+    differenzierbar und \(f(z_n) = 0\) für eine Folge \((z_n)_n \subset U\) disjunkter Punkte mit 
+    \(z_n \rightarrow z_0 \in U\).
+    \[ \Rightarrow f \equiv 0 \text{ in } U. \]
+\end{karte}
+
+\begin{karte}{Maximum Modulus Satz}
+    Sei \(U\subset \C\) ein Gebiet und \(\abb{f}{U}{\C}\) stetig komplex differenzierbar in \(U\) und nicht konstant. 
+    Dann gilt 
+    \[ \forall z\in U \forall \delta>0 \exists \omega \in U \cap C_\delta(z) : \abs{f(\omega)} > \abs{f(z)}. \]
+    Ist \(\abb{f}{U}{\C}\) wie oben und \(U\) beschränkt und \(f\) stetig auf \(\overline{U}\), so ist 
+    \[ \sup_{z\in U} \abs{f(z)} = \max_{z\in \partial U} \abs{f(z)}. \]
+\end{karte}
+
+\begin{karte}{Minimum Modulus Satz}
+    Sei \(U \subset \C\) ein Gebiet und \(\abb{f}{U}{\C}\) holomorph und nicht konstant. Dann gibt es kein 
+    \(z_0 \in U\), sodass 
+    \[ \abs{f(z)} \geq \abs{f(z_0)} \;\forall z\in U. \]
+\end{karte}
