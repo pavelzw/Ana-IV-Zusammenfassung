@@ -1,0 +1,46 @@
+\section{Moreras Theorem}
+
+\begin{karte}{Morera}
+    Sei \(U\subset \C\) offen, \(\abb{f}{U}{\C}\) stetig und für jedes Rechteck 
+    \(R \subset U\) gelte 
+    \[ \int_{\partial R} f(z) \dx{z} = 0. \]
+    Dann ist \(f\) analytisch.
+\end{karte}
+
+\begin{karte}{Lokal gleichmäßige Konvergenz}
+    Sei \( D \subset \C \) (offen oder nicht) und \((f_n)_n\), \(\abb{f}{D}{\C}\) Funktionen. 
+    Die Funktionenfolge \((f_n)_n\) konvergiert lokal gleichmäßig 
+    gegen \(f\), falls für jede kompakte Menge \(K \subset D\) \(f_n \rightarrow f\) 
+    gleichmäßig auf \(K\), d. h. \(\sup_{z\in K} \abs{f(z) - f_n(z)} \rightarrow 0\) 
+    für \(n\rightarrow \infty\).
+\end{karte}
+
+\begin{karte}{Weierstraß}
+    Sei \(U \subset \C\) offen und \((f_n)_n\) eine Folge von analytischen Funktionen 
+    \(\abb{f_n}{U}{\C}\). Konvergiert \((f_n)\) lokal gleichmäßig gegen \(f\) auf \(U\), 
+    so ist \(f\) analytisch.
+\end{karte}
+
+\begin{karte}{Analytisch ohne Liniensegment}
+    Sei \(U\subset \C\) offen, \(\abb{f}{U}{\C}\) stetig und analytisch in \(U \setminus L\), 
+    wobei \(L\) ein Liniensegment ist. Dann ist \(f\) analytisch in \(U\).
+\end{karte}
+
+\begin{karte}{Schwarz-Reflektions-Prinzip}
+    Sei \(\abb{f}{U}{\C}\) analytisch in einem Gebiet \(U\) in \(\overline{\C}_+\) 
+    (oder \(\overline{\C}_-\)) und \(\partial U \cap \R\) enthält ein Segment \(L\), 
+    \(f\) lässt sich stetig auf \(L\) fortsetzen und \(f(z)\in \R\) für \(z\in L\subset \R\). 
+    Setzt man \(U^* := \set{\overline{z} : z \in U}\) (Spiegelung an der reellen Achse) 
+    und definiert man \(\abb{g}{U\cup L \cup U^*} \rightarrow \C\) durch 
+    \[ g(z) := \begin{cases}
+        f(z), & z \in U \cup L, \\
+        \overline{f(z)}, & z \in U^*
+    \end{cases}, \]
+    so ist \(g\) analytisch in \(U \cup L \cup U^*\).
+\end{karte}
+
+\begin{karte}{Analytische Funktionen auf symmetrischen Gebieten}
+    Ist das Gebiet \(U \subset \C\) symmetrisch bezüglich der reellen Achse, 
+    ist \(\abb{f}{U}{\C}\) analytisch und ist \(f(z) \in \R\) für alle \(z\in U \cap \R\), 
+    so ist \(\overline{f(\overline{z})} = f(z)\) für alle \(z\in U\).
+\end{karte}

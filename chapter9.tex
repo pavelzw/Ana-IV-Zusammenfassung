@@ -1,0 +1,24 @@
+\section{Max-Modulus Anwendung}
+
+\begin{karte}{Satz von der offenen Abbildung}
+    Sei \(\abb{f}{U}{\C}\) analytisch und nicht konstant. Dann ist für jede offene Menge 
+    \(U'\subset U\) auch \(f(U')\) offen in \(\C\). (\( U\subset \C \) offen)
+\end{karte}
+
+\begin{karte}{Schwarz-Lemma}
+    Sei \(\mathbb{D} = \set{z\in \C: \abs{z} < 1}\) und \(\abb{f}{\mathbb{D}}{\C}\) 
+    analytisch mit \(\abs{f(z)} \leq 1 \;\forall z\in \mathbb{D}\) und \(f(0) = 0\).
+    Dann gilt 
+    \begin{enumerate}
+        \item \(\abs{f(z)} \leq \abs{z}\) in \(\mathbb{D}\),
+        \item \(\abs{f'(0)} \leq 1\)
+    \end{enumerate}
+    und gilt \gqq{\(=\)} in 2. oder 1. für ein \(z_0 \in \mathbb{D}\), 
+    so muss \(f(z) = az\) mit \(\abs{a} = 1\) sein.
+\end{karte}
+
+\begin{karte}{Blaschke Funktion}
+    \[ B_\alpha(z) := \frac{z - \alpha}{1 - \overline{\alpha} z}, \quad \abs{\alpha} < 1. \]
+    Aud \(\overline{\mathbb{D}}\) ist \(B_\alpha\) analytisch und für \(z\in \partial\mathbb{D}\) 
+    gilt \(\abs{B_\alpha (z)} = 1\). Somit gilt \(\abs{B_\alpha (z)} < 1 \;\forall z\in \mathbb{D}\).
+\end{karte}
