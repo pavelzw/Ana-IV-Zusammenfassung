@@ -1,0 +1,40 @@
+\section{Max-Modulus unbeschränkt}
+
+\begin{karte}{Betragsabschätzung auf \(\partial \C_+\)}
+    Sei \(\abb{f}{\C_+}{\C}\) analytisch und es existieren \(M_1, M_2 < \infty\) mit 
+    \begin{enumerate}
+        \item \(\abs{f(z)} \leq M_1 \;\forall z\in \R = \partial \C_+\),
+        \item \(\abs{f(z)} \leq M_2 \;\forall z\in \C_+\).
+    \end{enumerate}
+    Dann ist bereits \( \abs{f(z)} \leq M_1 \;\forall z\in \C_+ \).
+\end{karte}
+
+\begin{karte}{Abschätzung Betrag analytische Funktion}
+    Sei \(\abb{f}{\C_+}{\C}\) analytisch und 
+    \begin{enumerate}
+        \item \( \sup_{z\in\R} \abs{f(z)} \leq M \),
+        \item \(\forall \varepsilon > 0 \exists A_\varepsilon < \infty \forall z\in \C_+: \abs{f(z)} \leq A_\varepsilon e^{\varepsilon \Im(z)} \).
+    \end{enumerate}
+    \(\Rightarrow \sup_{z\in\C_+} \abs{f(z)} \leq M\).
+\end{karte}
+
+\subsection{Streifen \(a\leq \Re z \leq b\)}
+
+\begin{karte}{Hadamard 3-Linien-Satz}
+    Sei \(\abb{f}{S}{\C}\) analytisch und stetig auf \(\overline{S}\) mit 
+    \begin{enumerate}
+        \item \(M_1 := \sup_{y\in \R} \abs{f(iy)} < \infty\) \\
+        \(M_2 := \sup_{y\in\R} \abs{f(1+iy)} < \infty \)
+        \item \(\forall \varepsilon > 0 \exists A_\varepsilon < \infty \forall z\in S: 
+        \abs{f(z)} \leq A_\varepsilon e^{\varepsilon (\Im z)^2}\)
+    \end{enumerate}
+    Dann gilt schon 
+    \[ \abs{f(z)} \leq \max\set{M_1, M_2} \;\forall z\in S. \]
+    Zusatz: Genauer gilt für alle \( 0 < \theta < 1\): 
+    \[ \abs{f(z)} \leq M_1^{(1-\theta)} M_2^\theta \;\forall z\in S: \Re z = \theta. \]
+    Setzen wir für \(0 \leq \theta \leq 1\)
+    \[ M(\theta) := \sup_{y\in \R} \abs{f(\theta + iy)}, \]
+    so sagt der Satz 
+    \[ M(\theta) \leq M_1^{(1-\theta)} M_2^\theta, \]
+    d. h. \(\log M(\theta)\) ist konvex.
+\end{karte}
