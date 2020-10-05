@@ -1,0 +1,126 @@
+\section{Einf. zshgd. Gebiete}
+
+\subsection{Holomorph zshgd.}
+
+\begin{karte}{Holomorph einfach zusammenhängend}
+    Ein Gebiet \( U \subset \C\) (d. h. offen und zusammenhängend) heißt 
+    holomorph einfach zusammenhängend, falls für jede geschlossene Kurve \(\gamma\)
+    in \(U\) und jede analytische Funktion \(\abb{f}{U}{\C}\) auch 
+    \[ \int_\gamma f(z) \dx{z} = 0 \]
+    ist.\\
+    Es gilt 
+    holomorph einfach zusammenhängend \(\Leftrightarrow\) (topologisch) einfach zusammenhängend.
+\end{karte}
+
+\begin{karte}{Logarithmus und Wurzel}
+    Sei \(G\) ein holomorph einfach zusammenhängendes Gebiet und \(\abb{f}{G}{\C}\) 
+    holomorph ohne Nullstellen in \(G\). Dann gilt
+    \begin{enumerate}
+        \item Es gibt eine analytische Funktion 
+        \[ \abb{h}{G}{\C} \text{ mit } e^h = f. \]
+        \item Für alle \(n = 2,3,4,\ldots \) existieren analytische Funktionen 
+        \(\abb{g_n}{G}{\C}\) mit 
+        \[ (g_n)^n = f. \]
+    \end{enumerate}
+    \(h\) ist nur bis auf ganzzahlige Vielfache von \(2\pi i\) bestimmt und \(g_n\) eindeutig 
+    bis auf \(n\)-te Einheitswurzeln.\\
+    Wir schreiben auch \(\log f\) oder \(f^{1/n}\).
+\end{karte}
+
+\begin{karte}{Konforme äquivalenz von holomorph und einfach zusammenhängend}
+    Seien \(U\) ein holomorph einfach zusammenhängendes Gebiet und 
+    \(\tilde{U}\) ein weiteres Gebiet, für die es eine analytische Bijektion 
+    \(\abb{g}{U}{\tilde{U}}\) gibt, für die auch \(g^{-1}\) analytisch ist. 
+    Dann ist auch \(\tilde{U}\) holomorph einfach zusammenhängend.
+\end{karte}
+
+\begin{karte}{Annulus und Sektor}
+    Gegeben \(0 < r < R < \infty\) sei 
+    \[ A_{r,R} := \set{ z\in \C : r < \abs{z} < R } \]
+    der Ring (Annulus) und für \(\alpha < \beta\) reell mit \(\abs{\beta - \alpha} \leq 2 \pi\) setze 
+    \[ S_{\alpha, \beta} := \set{r e^{i\theta}: r > 0, \alpha < \theta < \beta} \]
+    (Sektor).
+\end{karte}
+
+\begin{karte}{Annulus Sektor zusammenhängend}
+    Sei \(0 \leq r < R < \infty \) und \(\alpha, \beta \in \R, \alpha < \beta\) 
+    und \( \abs{\beta - \alpha} \leq 2\pi \). Dann ist \(A_{r,R} \cap S_{\alpha, \beta}\) 
+    holomorph einfach zusammenhängend.\\
+    Sei zusätzlich \( \cos\left( \frac{\beta - \alpha}{2} \right) > \frac{r}{R} \). 
+    Dann ist \( A_{r,R} \cap S_{\alpha, \beta} \) sternförmig (und somit holomorph einfach zusammenhängend).
+\end{karte}
+
+\subsection{Homotopieinv. d. Linienint.}
+
+\begin{karte}{Homotope Kurven}
+    Zwei Kurven \(\abb{\gamma_0, \gamma_1}{[0,1]}{U}\), \(U\) Gebiet 
+    mit \(\gamma_0(0) = \gamma_1(0), \gamma_0(1) = \gamma_1(1)\) sind 
+    homotop, falls es eine stetige Funktion \(\abb{\Gamma}{[0,1]^2}{U}\) 
+    gibt, sodass 
+    \[ \Gamma(t,0) = \gamma_0(t) \text{ und } \Gamma(t,1) = \gamma_1(t) 
+    \text{ für alle } t\in [0,1]. \]
+    Sind \(\gamma_0, \gamma_1\) zwei \(PC^1\)-Kurven, welche homotop sind 
+    und \(\abb{f}{U}{\C}\) analytisch, dann gilt: 
+    \[ \int_{\gamma_0} f(z) \dx{z} = \int_{\gamma_1} f(z) \dx{z}. \]
+\end{karte}
+
+\begin{karte}{Homotopie aus homotopen Kurven}
+    Sind \(\abb{\gamma_0, \gamma_1}{[0,1]}{U}\) \(PC^1\)-Kurven mit gleichen 
+    Anfangs- und Endpunkten, welche homotop sind, so existiert eine Homotopie 
+    \(\abb{\tilde{\Gamma}}{[0,1]^2}{U}\) so, dass für alle \(s \in [0,1]\) 
+    die Funktion \(\tilde{\Gamma}(\cdot, s)\) \(PC^1\) ist.
+\end{karte}
+
+\begin{karte}{Lokal konstante Kurvenintegrale aus Homotopien}
+    Sind \(\abb{\gamma_0, \gamma_1}{[0,1]}{U}\) zwei homotope \(PC^1\)-Kurven 
+    mit \(\gamma_0(0) = \gamma_1(0), \gamma_0(1) = \gamma_1(1)\) und 
+    \( \abb{\tilde{\Gamma}}{[0,1]^2}{U} \) die Homotopie aus dem Lemma davor 
+    und \(\abb{f}{U}{\C}\) analytisch, so ist 
+    \[ s \mapsto h(s) := \int_0^1 f(\tilde{\Gamma}(t,s)) \partial_t \tilde{\Gamma}(t,s) \dx{t} \]
+    lokal konstant.
+\end{karte}
+
+\begin{karte}{Homotopieinvarianz des Linienintegrals}
+    Sei \(U \subset \C\) offen, \(\abb{f}{U}{\C}\) analytisch 
+    und \(\gamma_0, \gamma_1\) zwei Kurven in \(U\) die homotop sind und 
+    dieselben Anfangs- und Endpunkte besitzen. Dann ist 
+    \[ \int_{\gamma_0} f(z) \dx{z} = \int_{\gamma_1} f(z) \dx{z}. \]
+\end{karte}
+
+\begin{karte}{Einfach zusammenhängend}
+    Ein Gebiet \(U \subset \C\) heißt einfach zusammenhängend, falls 
+    für jede geschlossene Kurve \(\abb{\gamma}{[0,1]}{U}\) 
+    eine Homotopie \(\abb{\Gamma}{[0,1]^2}{U}\) existiert, sodass 
+    \[ \Gamma(t,1) = \gamma(0) \text{ für alle } t\in [0,1]. \]
+    Beispiele: 
+    \begin{enumerate}
+        \item Konvexe und sternförmige Gebiete
+        \item Nicht einfach zusammenhängend: Annulus
+    \end{enumerate}
+    Jedes einfach zusammenhängende Gebiet \(U \subset \C\) ist 
+    holomorph einfach zusammenhängend.
+\end{karte}
+
+\subsection{Logarithmus}
+
+\begin{karte}{Analytischer Zweig des Logarithmus}
+    Eine Funktion \(\abb{h}{U}{\C}\) mit 
+    \(\exp(h(z)) = z\) heißt analytischer Zweig des Logarithmus. 
+    Dies ist der Fall, wenn 
+    \begin{enumerate}
+        \item \(h\) analytisch in \(U\) ist.
+        \item \(h\) eine Inverse von \(\exp\) auf \(U\) ist.
+    \end{enumerate}
+    Ist \(h\) ein analytischer Zweig des Logarithmus, so ist dies auch 
+    \[ g(z) := h(z) + 2\pi i k \]
+    für jedes feste \(k\in \Z\).
+\end{karte}
+
+\begin{karte}{Beispiel für analytischen Zweig des Logarithmus}
+    Sei \(U \subset \C\) ein einfach zusammenhängendes Gebiet 
+    mit \(0 \notin U\). Für jede Wahl von \(z_0 \in U\) und 
+    \(h_0 \in \C\) ist 
+    \[ \log(z) := \int_{z_0}^z \frac{d \zeta}{\zeta}  + h_0 = \int_{\gamma_{z_0, z}} \frac{d\zeta}{\zeta} + h_0 \]
+    ein analytischer Zweig des Logarithmus. Hier ist \(\gamma_{z_0, z}\) 
+    eine beliebige Kurve von \(z_0\) nach \(z\) in \(U\).
+\end{karte}
