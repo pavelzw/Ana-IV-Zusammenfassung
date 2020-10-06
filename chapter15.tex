@@ -1,0 +1,43 @@
+\section{Residuensatz}
+
+\begin{karte}{Residuum}
+    Ist \(f(z) = \sum_{n=-\infty}^\infty a_n (z-z_0)^n \) die Laurententwicklung 
+    von \(f\)in einer punktierten Umgebung von \(z_0\), so heißt \(a_{-1}\) 
+    das Residuum von \(f\) in \(z_0\):
+    \[ \Res(f,z_0) := a_{-1}. \]
+    \begin{itemize}
+        \item Hat \(f\) einen einfachen Pol in 
+        \(z_0\), \(f(z) = \frac{A(z)}{B(z)}\), \(A,B\) analytisch in \(z_0\)
+        und \(B\) hat eine einfache Nullstelle in \(z_0\)
+        \[ \Rightarrow a_{-1} = \limesx{z}{z_0} (z-z_0) f(z) = \frac{A(z_0)}{B'(z_0)}. \]
+        \item \(f\) hat einen Pol der Ordnung \(k\) in \(z_0\)
+        \[ \Rightarrow \Res(f,z_0) = \frac{1}{(k-1)!} \frac{d^{k-1}}{dz^{k-1}} [(z-z_0)^k f(z)]|_{z=z_0}. \]
+        \item In den meisten Fällen von Polen sehr hoher Ordnung oder einer 
+        wesentlichen Singularität ist es oft am einfachsten, \(a_{-1}\) aus der 
+        Laurententwicklung abzulesen.
+    \end{itemize}
+\end{karte}
+
+\begin{karte}{Meromorph}
+    Sei \(U\subset \C\) ein Gebiet. \(f\) heißt meromorph, 
+    falls \(f\) analytisch in \(U\) bis auf endlich viele isolierte Pole ist.
+    D. h. es existieren \(z_1, \ldots, z_N \in U\), sodass 
+    \(\abb{f}{U\setminus \set{z_1, \ldots, z_N}}{\C}\) analytisch ist.
+\end{karte}
+
+\begin{karte}{Cauchyscher Residuensatz}
+    Angenommen \( f \) ist meromorph in einem einfach zusammenhängenden Gebiet 
+    \(U\) mit isolierten Singularitäten \(z_1, \ldots,z_N\in U\) und \(\gamma\) 
+    eine geschlossene Kurve in \(U\) und \(z_j \notin \Bild(\gamma)\) für alle 
+    \(j=1,\ldots, N\). Dann gilt 
+    \[ \int_\gamma f(z) \dx{z} = 2\pi i \sum_{k=1}^N n(\gamma, z_k) \Res(f,z_k). \]
+\end{karte}
+
+\begin{karte}{Cauchyscher Residuensatz bei regulären Kurven}
+    Angenommen \(f\) ist meromorph in einem einfach zusammenhängenden Gebiet \(U\)
+    mit isolierten Singularitäten und \(\gamma\) eine reguläre geschlossene 
+    Kurve in einer Teilmenge von \(U\), in der \(f\) analytisch ist. Dann ist 
+    \[ \int_\gamma f(z) \dx{z} = 2\pi i \sum_k \Res(f,z_k), \]
+    wobei die Summe über diejenigen \(k\) ist, für die die Singularität von 
+    \(f\) im Inneren von \(\gamma\) ist.
+\end{karte}

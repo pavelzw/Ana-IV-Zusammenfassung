@@ -1,0 +1,42 @@
+\section{Zählen von Nullstellen}
+
+\begin{karte}{\(N_\gamma(f), P_\gamma(f)\)}
+    \(N_\gamma(f) :=\) Anzahl der Nullstellen von \(f\) im Inneren von 
+    \(\gamma\), inklusive der Ordnung der Nullstelle. \\
+    \(P_\gamma(f) :=\) Anzahl der Pole von \(f\) im Inneren von 
+    \(\gamma\), inklusive der Ordnung der Pole.
+\end{karte}
+
+\begin{karte}{\(N_\gamma(f) - P_\gamma(f)\)}
+    Angenommen \(\gamma\) ist eine reguläre geschlossene Kurve und 
+    \(f\) ist meromorph im Inneren von \(\gamma\), stetig auf \(\gamma\) 
+    und hat auf \(\gamma\) keine Nullstellen oder Pole. Dann ist 
+    \[ \frac{1}{2\pi i}\int_\gamma \frac{f'}{f} \dx{z} = N_\gamma(f) - P_\gamma(f). \]
+    Ist \(f\) analytisch im Inneren und stetig und nicht verschwindend auf \(\gamma\), 
+    dann ist 
+    \[N_\gamma(f) = \frac{1}{2\pi i} \int_\gamma \frac{f'}{f}\dx{z}.\]
+\end{karte}
+
+\begin{karte}{Rouché}
+    Seien \(\gamma\) eine reguläre geschlossene Kurve, \(f,g\) analytisch 
+    im Inneren von \(\gamma\) und stetig auf \(\gamma\) und \(\abs{f(z)} > \abs{g(z)}\) 
+    für alle \(z\in \Bild(\gamma)\).
+    \[ \Rightarrow N_\gamma(f+g) = N_\gamma(f). \]
+    Insgebsondere ist \(f\neq 0\) auf \(\gamma\).
+\end{karte}
+
+\begin{karte}{Anwendung von Rouché}
+    \begin{enumerate}
+        \item Jedes analytische Polynom \(P(z) = a_0 + a_1 z + \cdots + a_n z^n\) 
+        vom Grad \(n\geq 1\) hat in \(\C\) genau \(n\) Nullstellen. 
+        \item Ist \(\abb{f}{\mathbb{D}}{\mathbb{D}}\) analytisch, stetig auf 
+        \(\overline{\mathbb{D}}\) und \(\abs{f(z)} < 1\) für alle \(z\in \partial \mathbb{D}\), 
+        so gibt es genau ein \(z_0 \in \mathbb{D}\) mit \(f(z_0) = z_0\), d. h. \(f\) 
+        hat genau einen Fixpunkt in \(\mathbb{D}\).
+        \item Das Mauerprinzip: Angenommen \(\abb{f_t}{U}{\C}, 0 \leq t \leq 1\) 
+        ist eine Familie analytischer Gunktionen in einem einfach zusammenhängenden 
+        Gebiet \(U, f_t(z) \) ist stetig in \(t\), uniform in \(z\) für \(z\) in 
+        kompakten Teilmengen von \(U\) und \(f_t(z) \neq 0\) auf \(\gamma\) für alle 
+        \(0\leq t \leq 1\). \(\Rightarrow N_\gamma(f_t)\) ist kompakt für alle \(t\in [0,1]\).
+    \end{enumerate}
+\end{karte}
