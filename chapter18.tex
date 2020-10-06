@@ -1,0 +1,51 @@
+\section{Summieren wie Cauchy}
+
+\begin{karte}{Summen der Form \(\sum_{n=-\infty}^{\infty} f(n)\) \\ Teil 1}
+    Brauchen eine Funktion \(g\), deren Residuen durch 
+    \(\set{f(n) : n\in \Z}\) gegeben sind. Zum Beispiel 
+    \(g(z) = f(z) \varphi(z)\), mit \(\varphi(z)= \pi \frac{\cos(\pi z)}{\sin(\pi z)} 
+    = \pi \cot(\pi z)\), da \(\varphi\) einfache Pole mit Residuum \(1\) 
+    in \(n\in \Z\) hat.\\
+    Wende dann Residuensatz auf das Integral 
+    \[ \int_{C_n} f(z) \pi \cot(\pi z) \dx{z} \]
+    an, wobei \(C_N\) eine regulär geschlossene Kurve ist, die die Zahlen 
+    \(0,\pm 1, \ldots, \pm N\) und die Pole von \(f\) (endlich viele) 
+    umkreist. Dann folgt 
+    \[ \int_{C_N} f(z) \pi \cot(\pi z) \dx{z} 
+    = 2\pi i \left( \sum_{z_k \neq n = -N}^N f(n) + 
+    \sum_k \Res(f(z) \pi \cot(\pi z), z_k) \right), \]
+    wobei \(z_k\) die Pole von \(f\) sind.\\
+    Außerdem verlangen wir für Konvergenz, dass ein \(A\) 
+    existiert mit \(\abs{f(z)} \leq \frac{A}{\abs{z}^2}\) für alle \(\abs{z}\) groß genug.\\
+\end{karte}
+
+\begin{karte}{Summen der Form \(\sum_{n=-\infty}^{\infty} f(n)\) \\ Teil 2}
+    Durch geeignete Wahl von \(C_N\) kommen wir auf \(\limes{N} \int_{C_N} f(z) \pi \cot(\pi z) \dx{z} = 0\)
+    und somit 
+    \[ \sum_{z_k \neq n = -\infty}^\infty f(z) = -\sum_k \Res(f(z)\pi \cot(\pi z), z_k). \]
+    Wahl von \(C_N\): Quadrat mit Ecken in \(\pm(N+\frac{1}{2})\pm(N+\frac{1}{2})i\), welches 
+    die Pole von \(\cot(\pi z)\) vermeidet. Auf \(C_N\) ist \(\cot(\pi z)\) beschränkt 
+    und damit ist das Integral gleich \(0\).
+\end{karte}
+
+\begin{karte}{Summen der Form \(\sum_{n=-\infty}^{\infty} (-1)^n f(n)\) \\ Teil 1}
+    Wir integrieren wieder über den Würfel \(C_N\) und benutzen diesmal 
+    die Funktion 
+    \[ z\mapsto f(z) \frac{\pi}{\sin(\pi z)}. \]
+    Da \(\Res(\pi \csc(\pi z), n) = \Res(\frac{\pi}{\sin(\pi z)}, n) 
+    = (-1)^n \) und es folgt da \(\abs{f(z)} \leq A/\abs{z}^2\) 
+    \[ \limes{N} \int_{C_N} f(z) \frac{\pi}{\sin(\pi z)} \dx{z} = 0 \]
+    und damit folgt aus dem Residuensatz 
+    \[ \sum_{z_k \neq n = -\infty}^\infty (-1)^n f(n) = -\sum_k \Res(f(z) \frac{\pi}{\sin(\pi z)}, z_k), \]
+    wobei \(z_k\) die Pole von \(f\) in \(\C\) sind.
+\end{karte}
+
+\begin{karte}{Summen über Binomialkoeffizienten}
+    Beachte: \(\binom{n}{k}\) ist der Koeffizient von \(z^k\) in \((1+z)^n\).
+    \[ \Rightarrow \binom{n}{k} = \frac{1}{2\pi i} \int_\gamma \frac{(1+z)^{n}}{z^{k+1}} \dx{z} \]
+    für jede reguläre Kurve \(\gamma\), die \(0\) im Inneren hat. Es folgt dann auch 
+    \[ \binom{2n}{n} = \frac{1}{2\pi i} \int_\gamma \frac{(1+z)^{2n}}{z^{n+1}} \dx{z} \]
+    und ist \(\gamma = \partial \mathbb{D}\), also \(\gamma(t) = e^{2\pi i t}, 0\leq t \leq 1\), 
+    so findet man 
+    \[ \binom{2n}{n} \leq 4^n. \]
+\end{karte}
