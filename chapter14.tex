@@ -1,0 +1,67 @@
+\section{Laurententwicklungen}
+
+\begin{karte}{Laurentreihe Konvergenz}
+    Seien \((\mu_n)_{n\in\Z} \subset \C\). Wir sagen \(\sum_{n=-\infty}^\infty \mu_n\) 
+    existiert (konvergiert), falls die beiden Reihen \(\sum_{k=0}^\infty \mu_k\) 
+    und \(\sum_{k=1}^\infty \mu_{-k}\) konvergieren. Wir setzen dann 
+    \[ \sum_{n=-\infty}^\infty \mu_n := \sum_{k=1}^\infty \mu_{-k} + \sum_{k=0}^\infty \mu_k. \] 
+    Sei \((a_n)_{n\in\Z} \subset \C\). Die Laurentreihe 
+    \[ f(z) := \sum_{n=-\infty}^\infty a_n z^n \]
+    konvergiert in der Menge \(D := \set{z\in \C: R_1 < \abs{z}<R_2}\) mit 
+    \[ R_2 := \frac{1}{\limsup_{n\rightarrow \infty} \abs{a_n}^{1/n}} 
+    \text{ und } R_1 := \limsup_{k\rightarrow\infty} \abs{a_{-k}}^{1/k}. \]
+    Ist \(R_1 < R_2\), so ist \(D\) ein Annulus und \(f\) ist analytisch in \(D\).
+\end{karte}
+
+\begin{karte}{Laurententwicklung von \(f\) in Annulus}
+    Ist \(f\) analytisch in dem Annulus \(A_{R_1, R_2} = \set{z\in\C: R_1 < \abs{z}<R_2}\), 
+    so hat \(f\) eine konvergente Laurententwicklung 
+    \[ f(z) = \sum_{n=-\infty}^\infty a_n z^n \text{ in } A_{R_1, R_2}. \]
+    Es gilt 
+    \[ a_k = \frac{1}{2\pi i} \int_{\partial C_r(0)} \frac{f(\zeta)}{\zeta^{k+1}} 
+    \text{ für alle } R_1 < r < R_2. \]
+    Die Laurententwicklung ist eindeutig.
+\end{karte}
+
+\begin{karte}{Darstellung Laurententwicklung}
+    Ist \(f\) analytisch in dem Annulus \(A_{R_1, R_2}(z_0) = \set{z\in \C: R_1 < \abs{z-z_0} < R_2}\), 
+    so hat \(f\) die eindeutige Darstellung 
+    \[f(z) = \sum_{k=-\infty}^\infty a_k (z-z_0)^k, \]
+    wobei \[ a_k = \frac{1}{2\pi i} \int_{\partial C_r(z_0)} \frac{f(z)}{(z-z_0)^{k+1}} \dx{z} \]
+    und \(\partial C_r(z_0) = \set{z\in \C: \abs{z-z_0} = r}\) für beliebiges \(R_1 < r < R_2\).
+\end{karte}
+
+\begin{karte}{Laurententwicklung bei isolierten Singularitäten}
+    Hat \(f\) in \(z_0\) eine isolierte Singularität und ist analytisch in 
+    einer punktierten Umgebung von \(z_0\), so gilt für ein \(\delta > 0\) 
+    und alle \(0<\abs{z-z_0}<\delta\) 
+    \[ f(z) = \sum_{k=-\infty}^\infty a_k (z-z_0)^k. \]
+\end{karte}
+
+\begin{karte}{Hauptteil/analytischer Teil}
+    Ist \(f(z) = \sum_{k\in\Z} a_k (z-z_0)^k\) die Laurententwicklung 
+    einer Funktion \(f\) um die isolierte Singularität in \(z_0\), 
+    so nennen wir \(\sum_{k=-\infty}^{-1}a_k (z-z_0)^k\) den Hauptteil 
+    von \(f\) in \(z_0\) und \(\sum_{k=0}^\infty a_k (z-z_0)^k\) 
+    den analytischen Teil von \(f\) in \(z_0\).\\
+    \begin{itemize}
+        \item Hat \(f\) eine hebbare Singularität in \(z_0\), so sind alle Koeffizienten 
+        der Laurententwicklung \(a_k = 0\) für alle \(k \leq -1\).
+        \item \(f\) hat einen Pol der Ordnung \(k\) in \(z_0\)
+        \(\Leftrightarrow\) \(a_{-k} \neq 0\) und \(a_{-n} = 0\) für 
+        alle \(n\geq k+1\).
+        \item Hat \(f\) eine wesentliche Singularität in \(z_0\), 
+        so hat die Laurententwicklung von \(f\) \(\infty\)-viele 
+        Koeffizienten im Hauptteil \(\neq 0\), d. h. 
+        \( \set{ k\in \Z: k<0 \text{ und } a_k \neq 0 } \) ist 
+        unendlich groß.
+    \end{itemize}
+\end{karte}
+
+\begin{karte}{Partialbruchzerlegung}
+    Jede rationale Funktion der Form 
+    \[ R(z) = \frac{P(z)}{G(z)} = \frac{P(z)}{(z - z_1)^{k_1} \cdots (z-z_n)^{k_n}}, \]
+    wobei \(P\) und \(G\) Polynome vom Grad \(\deg P < \deg G\) sind, 
+    kann durch eine Summe von Polynomen in den Variablen 
+    \(\frac{1}{z-z_k}, k=1,\ldots, n\) dargestellt werden.
+\end{karte}

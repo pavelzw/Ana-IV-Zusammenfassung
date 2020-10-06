@@ -1,0 +1,55 @@
+\section{Isolierte Singularitäten}
+
+\begin{karte}{Isolierte Singularität}
+    Sei \(U\subset \C\) offen, \(z_0 \in U\) und \(\abb{f}{U}{\C}\) oder 
+    \(\abb{f}{U\setminus \set{z_0}}{\C}\). Dann hat \(f\) in \(z_0\) 
+    eine isolierte Singularität, falls \(f\) in einer punktierten Kreisscheibe 
+    um \(z_0\) analytisch ist, aber nicht in einer offenen Kreisscheibe um 
+    \(z_0\) analytisch ist.
+\end{karte}
+
+\begin{karte}{Hebbare Singularität, Pol, wesentliche Singularität}
+    Angenommen \(f\) ist definiert in einer punktierten Umgebung von \(z_0\) 
+    und hat in \(z_0\) eine isolierte Singularität. 
+    \begin{enumerate}
+        \item Falls eine analytische Funktion \(g\) in einer Umgebung 
+        von \(z_0\) existiert, sodass \(g = f\) in einer punktierten 
+        Kreisscheibe um \(z_0\), so hat \(f\) in \(z_0\) eine hebbare Singularität.
+        \item Falls man \(g\) für \(z\neq z_0\) schreiben kann als 
+        \[ f(z) = \frac{A(z)}{B(z)}, \]
+        \(A,B\) analytisch in einer Umgebung von \(z_0\), 
+        \(A(z_0) \neq 0\) und \(B(z_0) = 0\), so hat \(f\) 
+        einen Pol in \(z_0\). Hat \(B\) eine Nullstelle der Ordnung \(k\), 
+        so hat \(f\) einen Pol der Ordnung \(k\) in \(z_0\).
+        \item Hat \(f\) weder eine hebbare Singularität noch einen Pol 
+        in \(z_0\), so sagen wir, dass \(f\) eine wesentliche Singularität 
+        in \(z_0\) hat.
+    \end{enumerate}
+\end{karte}
+
+\begin{karte}{Riemannsches Prinzip}
+    Hat \(f\) in \(z_0\) eine isolierte Singularität und gilt 
+    \[ \limesx{z}{z_0} (z - z_0) f(z) = 0, \]
+    so ist die Singularität hebbar.\\
+    Also gilt auch: ist \(f\) in einer punktierten Umgebung 
+    von \(z_0\) beschränkt, so hat \(f\) in \(z_0\) eine hebbare 
+    Singularität.
+\end{karte}
+
+\begin{karte}{Pol der Ordnung \(k\) Kriterium}
+    Ist \(f\) analytisch in einer punktierten Umgebung von \(z_0\) 
+    und gibt es \(k\in \N\) mit 
+    \[ \limesx{z}{z_0} (z - z_0)^k f(z) \neq 0 \text{ und } 
+    \limesx{z}{z_0} (z - z_0)^{k+1} f(z) = 0, \]
+    so hat \(f\) in \(z_0\) einen Pol der Ordnung \(k\).
+\end{karte}
+
+\begin{karte}{Casorati-Weierstraß}
+    Hat \(f\) in \(z_0\) eine wesentliche Singularität und ist \(D\) 
+    irgendeine punktierte Umgebung von \(z_0\), auf der \(f\) analytisch 
+    ist, so ist 
+    \[ f(D) = \set{f(z) : z\in D} \]
+    dicht in \(\C\).
+    Picards Satz sagt sogar, dass es einen Punkt \(\omega \in \C\) gibt, 
+    sodass \(f(D) \supset \C \setminus \set{\omega}\).
+\end{karte}
