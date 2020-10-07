@@ -1,0 +1,32 @@
+\section{Gewöhnliche DGL}
+
+\begin{karte}{Homogene Differentialgleichungen}
+    \[ \frac{dy}{dt} = f(t,y) \]
+    Anfangswert \(y(t_0) = y_0, t_0 \in \R\) fest, z. B. 
+    \[ \dot{y} = g(t) \]
+    \(\Rightarrow y(t) = y_0 + \int_{t_0}^t g(s) \dx{s} \) ist die Lösung. 
+    Allgemeine lineare gewöhnliche Differentialgleichung erster Ordnung: 
+    \[ \frac{dy}{dt} + a(t) y = 0 \]
+    Die homogene Gleichung lässt sich lösen durch 
+    \(\frac{\dot{y}}{y} = -a(t)\) und durch Integrieren und \(\exp\) kommen wir auf 
+    \[ y(t) = y(t_0) \exp\left( -\int_{t_0}^t a(s) \dx{s} \right). \]
+    Somit ist jede Lösung der homogenen Differentialgleichung von der Form 
+    \[ y(t) = c \exp \left( -\int a(s) \dx{s} \right). \]
+\end{karte}
+
+\begin{karte}{Inhomogene Differentialgleichungen}
+    \[ \frac{dy}{dt} + a(t) y = b(t), y(t_0) = y_0 \]
+    Multipliziere mit \(\mu(t) = \exp(\int_{t_0}^t a(s) \dx{s})\),
+    \[ \Rightarrow \frac{d}{dt} (\mu(t) y(t)) = \mu(t)\frac{dy}{dt} + \mu(t) a(t) y = \mu(t) b(t) \]
+    \[ \Rightarrow y(t) = \exp\left( -\int_{t_0}^t a(s) \dx{s} \right) \left[ \int_{t_0}^t \mu(s) b(s) \dx{s} + y_0 \right] \]
+\end{karte}
+
+\begin{karte}{Separable Gleichungen}
+    Von der Form 
+    \[ \frac{dy}{dt} = \frac{g(t)}{f(y)} \]
+    \[ \Leftrightarrow f(y) \frac{dy}{dt} = g(t) = \frac{d}{dt} F(y(t)) 
+    \text{ mit } F' = f, \]
+    d. h. \(\F = \int f(y) \dx{y}\)
+    \[\Rightarrow F(y(t) ) = \int g(s) \dx{s} + c \]
+    Dann nach \(y(t) \) auflösen, so möglich.
+\end{karte}
