@@ -1,0 +1,74 @@
+\section{Existenz und Eindeutigkeitssaatz}
+
+\begin{karte}{Differentialgleichung \(n\)-ter Ordnung}
+    Gegeben eine Differentialgleichung \(n\)-ter Ordnung
+    \[ \frac{d^n y}{dt^n} F(t,y,\dot{y}, \ldots, y^{(n-1)}) \]
+    mit Anfangswerten bei \(t_0\): 
+    \[ y_0 = y(t_0), \dot{y}_0 = \dot{y}(t_0), y_0^{(n-1)} = y^{(n-1)}(t_0), \]
+    wobei \(t_0\in\R, y_0 \in V, \ldots, y_0^{(n-1)} \in V\) gegeben sind.
+\end{karte}
+
+\begin{karte}{Umschreiben von System \(n\)-ter Ordnung zu System \(1\)-ter Ordnung}
+    Setze 
+    \begin{align*}
+        z_0(t) &= y(t) \in V \\
+        z_1(t) &= \dot{y}(t) = \dot{z}_0(t)\in V \\
+        &\vdots \\
+        z_{n-1}(t) = y^{(n-1)}(t) = \dot{z}_{n-2}(t)
+    \end{align*}
+    Dann wird \(\frac{d^n y}{dt^n} = F(t,y,\dot{y},\ldots, y^{(n-1)})\) 
+    von \(y\) genau dann gelöst, wenn \(z = (z_0,\ldots, z_{n-1}) \in V^n = V\times \cdots \times V \)
+    folgendes System erster Ordnung löst:
+    \[ \frac{dz}{dt} = \begin{pmatrix}
+        \frac{dz_0}{dt} \\
+        \vdots \\
+        \frac{d z_{n-1}}{dt}
+    \end{pmatrix} 
+    = \begin{pmatrix}
+        z_1 \\
+        \vdots \\
+        F(t,z_0,z_1, \ldots, z_{n-1})
+    \end{pmatrix} =: G(t,z) \]
+    mit Anfangsbedingung 
+    \[ z(t_0) = \begin{pmatrix}
+        y_0 \\
+        \vdots \\
+        y_{n-1}
+    \end{pmatrix} \in V^n. \]
+\end{karte}
+
+\begin{karte}{Lokal Lipschitz-stetig}
+    Sei \(D\subset \R \times \R^d\) 
+    oder \(D \subset \R \times V\) und \(\abb{F}{D}{\R^d}\) 
+    oder \(\abb{F}{D}{V}\) mit \(V\) normierter, vollständiger 
+    Vektorraum. Dann heißt \(F\) lokal Lipschitz-stetig bezüglich 
+    \(x\), falls für alle \((t_0, x_0)\in D\) ein \(\delta > 0\) 
+    und \(L>0\) existiert, sodass für alle \((t,x),(t,x')\in D\) gilt: 
+    \[ ||F(t,x) - F(t,x') || \leq L ||x-x'||. \]
+\end{karte}
+
+\begin{karte}{Picard-Lindelöf}
+    Ist \(D\subset \R\times \R^d \) und \(D\neq 0\), außerdem 
+    \(\abb{F}{D}{\R^d}\) (oder \(\abb{F}{D}{V}\)) stetig und lokal 
+    Lipschitz-stetig bezüglich \(x\), dann hat das Anfangswertproblem 
+    \[ \dot{y}(t) = F(t,y(t)), y(t_0) = y_0 \in \R^d \]
+    lokal (in \(t\) um \(t_0\)) genau eine Lösung. D. h. es existiert ein 
+    Intervall \(t_0 \in J \subset \R\) und eine offene Umgebung \(U \subset \R^d\) 
+    von \(y_0\) so, dass \(J \times U \subset D\) ist und es genau eine 
+    differenzierbare Funktion 
+    \(\abb{y}{J\times U}{D}\) gibt mit 
+    \[ y(t_0)= y_0 \]
+    und 
+    \[ \frac{dy}{dt} = \dot{y}(t) = F(t,y(t)) \;\forall t\in J. \]
+    Blow-Up Alternative: Ist \(J = (T_-, T_+)\) das maximale 
+    Zeitintervall, für das eine Lösung existiert, so gilt 
+    \(T_+ = \infty\) oder \(\limesx{t}{T_+} ||y(t)|| = \infty \) 
+    oder \\
+    \( \limesx{t}{T_+} \mathrm{dist}((t,y(t)), \partial D) = 0 \) 
+    (nur relevant, falls \(F\) nicht auf \(\R\times \R^d\) definiert ist)
+\end{karte}
+
+\begin{karte}{Konsequenzen aus Picard-Lindelöf}
+    Sobald 2 Lösungen auf einem Zeitintervall existieren, kreuzen oder 
+    berühren sie sich nicht.
+\end{karte}

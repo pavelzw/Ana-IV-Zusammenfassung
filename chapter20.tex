@@ -1,0 +1,30 @@
+\section{Einfache Populationsmodelle}
+
+\begin{karte}{Malthusisches Wachstumsgesetz}
+    Sei \(p(t) \) die Population einer Spezies zur Zeit \(t\) 
+    und \(r(t,p)\) die Differenz zwischen Geburts- und Sterberate. 
+    Ist die Spezies isoliert, so ist 
+    \[ \frac{dp}{dt} = r(t,p)p(t). \]
+    Einfachste Annahme: \(r(t,p) = a\) ist konstant. 
+    \[ \frac{dp}{dt} = ap. \]
+    Lösung ist gegeben durch 
+    \[ p(t) = p(t_0) \exp(a(t_0-t)) \;\forall t\in \R. \]
+\end{karte}
+
+\begin{karte}{Logistische Gleichung}
+    Ist die Population sehr groß, wird sie nicht ohne weiteres 
+    exponentiell weiter anwachsen können. \(\Rightarrow -bp^2\) mit 
+    \(b>0\) konstant.
+    \[ \frac{dp}{dt} = ap - bp^2, p(t_0) = p_0 \]
+    ist eine separable Gleichung. Es ergeben sich drei Fälle:
+    \begin{enumerate}
+        \item \( p_0 = a/b \), so ist \(p(t) = a/b\) eine Lösung (Gleichgewicht)
+        \item Ist \(p_0 = 0\), so ist \(p(t) = 0\) eine Lösung.
+        \item Sei \(p_0 \neq 0, p_0 \neq a/b\). 
+    \end{enumerate}
+    \[ \Rightarrow p(t) = \frac{a p_0}{b p_0 + (a-bp_0) e^{-a(t-t_0)}}, \]
+    wenn \(p_0 \neq 0\) und \(p_0 \neq \frac{a}{b}\) ist.
+    Grenzpopulation ist \(a/b\).\\
+    Ist \(0<p_0<a/b\), so ist \(t\mapsto p(t)\) wachsend. 
+    Ist \(p_0 > a/b\), so ist \(t\mapsto p(t)\) fallend.
+\end{karte}
