@@ -1,0 +1,64 @@
+\section{Autonome DGLs}
+
+\begin{karte}{Autonom}
+    Sei \(U \subset \R^d\) (oder normierter, vollständiger Vektorraum \(V\))
+    und \(\abb{f}{U}{\R^d}\) stetig. Dann heißt die Differentialgleichung 
+    \[ \dot{y}(t) = f(y(t)), \]
+    wobei \(J\subset \R\) ein Intervall ist und \(\abb{y}{G}{U}\) eine 
+    differenzierbare Funtktion ist, \textit{autonom}. 
+    Ist \(\abb{y}{J}{U}\) eine Lösung, so nennen wir 
+    \[ y(J) = \set{y(t) : t\in J} \]
+    die \textit{Bahn} (oder Orbit oder Trajektorie) der Differentialgleichung. 
+    Wir können noch die Anfangsbedingung 
+    \[ y(t_0) = y_0 \] 
+    nehmen.
+\end{karte}
+
+\begin{karte}{Stationärer Fixpunkt}
+    Ist \(\abb{f}{U}{\R^d}, U \subset \R^d \) offen, und \(z\in U\), 
+    so heißt \(z\) \textit{stationärer Punkt (Fixpunkt)}, 
+    falls 
+    \[ f(z) = 0. \]
+    Ist \(f(z) = 0\) für ein \(z\), so hat die Differentialgleichung die 
+    Lösung 
+    \[ y(t) = z \;\forall t\in \R. \]
+    Diese Lösung existiert für alle Zeiten und bewegt sich nicht, sie ist stationär.
+\end{karte}
+
+\begin{karte}{\(y_\infty\)}
+    Ist \(\abb{f}{\R^d}{\R^d}\) stetig und \(\abb{y}{[t_0,\infty)}{\R^d}\) 
+    eine differenzierbare Funktion mit 
+    \[ \dot{y}(t) = f(y(t)) \;\forall t\geq t_0 \]
+    und \(y_\infty = \limes{t} y(t)\) existiert, dann ist \(y_\infty\) 
+    ein stationärer Punkt, d. h. \(f(y_\infty) = 0\). Außerdem gilt dann auch 
+    \[ \limes{t} \dot{y}(t) = 0. \]
+\end{karte}
+
+\begin{karte}{Asymptotisch stabil}
+    Man sieht, dass der stationäre Punkt \(a/b\) und damit die Lösung 
+    \(\tilde{p}(t) := a/b\) stabil ist und sogar \textit{asymptotisch stabil}, 
+    d. h. jede Lösung mit \(p(0) = p_0 > 0\) strebt für 
+    \(t\rightarrow \infty\) gegen \(a/b\), d. h. 
+    \[ \limes{t} \abs{p(t) - \tilde{p}(t)} = \limes{t} \abs{p(t) - a/b} = 0. \]
+\end{karte}
+
+\begin{karte}{Invarianz unter Verschiebung in der Zeit}
+    Angenommen \(t\mapsto y(t) \) ist eine Lösung von \(\dot{y} = f(y)\). 
+    Dann ist \(\tilde{y}(t) := y(t+c), c\in \R\) auch eine Lösung 
+    (in dem entsprechenden Zeitintervall).
+\end{karte}
+
+\begin{karte}{Eindeutigkeit}
+    Ist \(f\) lokal Lipschitzstetig, dann gibt es zu jedem Punkt 
+    \(y_0 \in \R^d\) genau einen Ordbit der Gleichung \(\dot{y} = f(y)\).\\
+    Existiert für zwei Lösungen \(y_1, y_2\) ein \(\tilde{t}\) 
+    mit \(y_1(\tilde{t}) = y_2(\tilde{t})\), so ist \(y_1 \equiv y_2\).
+\end{karte}
+
+\begin{karte}{Periodische Lösungen}
+    Angenommen \(t \mapsto y(t)\) ist Lösung von \(\dot{y} = f(y)\) 
+    und \(f\) ist lokal Lipschitzstetig, ferner sei 
+    \(y(t_0 + T) = y(t_0)\) für ein \(t_0 \in \R\) und \(T>0\), dann ist 
+    \[ y(t+T)=y(t) \;\forall t, \]
+    d. h. die Lösung ist periodisch und global.
+\end{karte}
